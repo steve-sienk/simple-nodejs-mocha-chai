@@ -1,0 +1,25 @@
+{
+  "name": "simple_nodejs_mocha",
+  "version": "1.0.0",
+  "description": "simple app for simple testing",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "assert": "^2.0.0",
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com"
+  },
+  "author": "",
+  "license": "ISC"
+}
