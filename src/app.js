@@ -1,3 +1,7 @@
+const print = require('./print.js');
+
 module.exports = function addOne(num) {
-  return num+1
+  const result = num+1
+  print(result)
+  return result
 }

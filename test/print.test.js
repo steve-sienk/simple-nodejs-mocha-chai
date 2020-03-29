@@ -1,6 +1,6 @@
 //var assert = require('assert');
 var sinon = require('sinon')
-var print = require('../src/print.js');
+const print = require('../src/print.js');
 var assert = require('chai').assert;
 
 describe('print', function() {

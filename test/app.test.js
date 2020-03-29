@@ -1,8 +1,17 @@
 //var assert = require('assert');
-var app = require('../src/app.js');
 var assert = require('chai').assert;
+var sinon = require('sinon')
+var rewire = require('rewire')
+var app = rewire('../src/app.js');
+var print = app.__get__('print')
 
 describe('app', function() {
+  it('prints the result to the console', ()=> {
+    let printSpy = sinon.spy(print)
+    app.__set__('print', printSpy)
+    app(4)
+    assert.isTrue(printSpy.calledWith(5))
+  })
   it('adds one to one', function() {
     var result = app(1)
     assert.equal(result, 2, 'addone(1) is 2');
